@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+class Agent
+{
+    public:
+         int Age (){
+        cout << "HOLD!! ENTER YOUR AGE TO ENTER!: ";
+        cin >> Age;
+    if(Age<=17 )
+        {
+        cout << "YOU ARE NOT ALLOWED TO ENTER!";
+        }
+    else
+    {
+
+        cout << "ACCESS GRANTED";
+    }
+    }
+};
+
+void UsrName(string name){
+    cout << "WHAT IS YOUR USRNAME: " << name;
+    getline(cin, name);
+
+    cout << "YOUR USRNAME IS: " << name;
+}
+
+
+
+
+int main()
+{
+UsrName(name);
+
+    return 0;
+}
