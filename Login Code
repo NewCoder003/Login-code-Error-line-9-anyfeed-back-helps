@@ -1,37 +1,63 @@
 #include <iostream>
-
 using namespace std;
-class Agent
-{
-    public:
-         int Age (){
-        cout << "HOLD!! ENTER YOUR AGE TO ENTER!: ";
-        cin >> Age;
-    if(Age<=17 )
-        {
-        cout << "YOU ARE NOT ALLOWED TO ENTER!";
-        }
-    else
-    {
 
-        cout << "ACCESS GRANTED";
-    }
-    }
+class AgeVer{
+    public:
+        int Age;
+        AgeVer(){
+        }
 };
 
-void UsrName(string name){
-    cout << "WHAT IS YOUR USRNAME: " << name;
-    getline(cin, name);
+class LoginManager{
+    public:
+        string UsrnameAttempt;
+        string PasswordAttempt;
+        LoginManager(){
+        accessGranted = 0;
+        }
+        void Login ()
+        {
+        cout << "Enter Email : ";
+        cin >> UsrnameAttempt;
+        if(UsrnameAttempt == UsrName)
+            {
+            cout << "ENTER PASSWORD: ";
+            cin >> PasswordAttempt;
+        if (PasswordAttempt == Password)
+            {
+            cout << "WELCOME..." ;
+        }
+        }
+          else {
+                cout << "INCORRECT LOGIN";
+            }
+        }
+    private:
+        string Password = "Bestcook1";
+        string UsrName = "usr@gmail.com";
+        bool accessGranted;
+};
 
-    cout << "YOUR USRNAME IS: " << name;
-}
+class Note{
+    public:
+      string NoteAttempt;
+      void notes (){
+      cout << "ENTER NOTES: ";
+      cin >> NoteAttempt;
+      }
+    private:
 
 
+};
 
 
-int main()
-{
-UsrName(name);
+int main (){
+LoginManager app;
+app.Login();
+cin.get();
 
-    return 0;
-}
+    Note noteObj;
+    noteObj.notes();
+
+
+};
